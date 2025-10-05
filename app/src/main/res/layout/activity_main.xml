@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/placeholder_destination"
+            android:scaleType="centerCrop"
+            android:contentDescription="Image de la destination" />
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/destination_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Découverte de Tunis"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+
+            <TextView
+                android:id="@+id/narrative_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Bienvenue dans la médina de Tunis, un labyrinthe de ruelles animées où chaque coin de rue raconte une histoire..."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.2"/>
+
+
+            <TextView
+                android:id="@+id/gallery_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galerie de photos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <HorizontalScrollView
+                android:id="@+id/gallery_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:id="@+id/gallery_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/gallery_image1"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/placeholder_gallery_1"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="8dp"/>
+                    <ImageView
+                        android:id="@+id/gallery_image2"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/placeholder_gallery_2"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="8dp"/>
+                    <ImageView
+                        android:id="@+id/gallery_image3"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/placeholder_gallery_3"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/places_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lieux incontournables"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/place1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• La Mosquée Zitouna"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/place2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Le souk El Attarine"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/place3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Le Musée national du Bardo"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:id="@+id/restaurants_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurants recommandés"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/restaurant_card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <ImageView
+                        android:id="@+id/restaurant_image1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/placeholder_restaurant"
+                        android:scaleType="centerCrop"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:id="@+id/restaurant_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dar El Jeld"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/restaurant_desc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cuisine traditionnelle tunisienne dans un cadre historique."/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/map_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carte de la région"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/map_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/placeholder_map"
+                android:contentDescription="Carte de la destination" />
+
+
+            <TextView
+                android:id="@+id/tips_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conseils pratiques"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/practical_tips_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Transport : Le taxi est le moyen le plus simple de se déplacer. \nBudget : Prévoyez un budget modéré pour les repas et les souvenirs. \nSécurité : Restez dans les zones touristiques et surveillez vos affaires dans les souks."
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_marginBottom="16dp"/>
+
+
+            <TextView
+                android:id="@+id/reviews_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avis des visiteurs"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <LinearLayout
+                android:id="@+id/reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/review1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alice : J'ai adoré la visite de la médina, très authentique !"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/review2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mohamed : Les restaurants sont excellents et l'ambiance unique."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/review3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fatma : La carte m'a beaucoup aidé pour me repérer dans la ville."
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/review4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lina : Beautiful city, lots of cultural spots to see!"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/contact_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restez en contact"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Votre email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="8dp"
+                android:padding="10dp"
+                android:background="@android:drawable/edit_text"/>
+
+            <EditText
+                android:id="@+id/message_input"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Votre message"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp"
+                android:padding="10dp"
+                android:background="@android:drawable/edit_text"/>
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envoyer"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
